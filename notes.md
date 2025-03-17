@@ -62,3 +62,17 @@ tsc --intit
 The methods of the provider class can be injected as a dependency to another class with the decorator injectable
 
 We intializing our app using the bootstrap funtction in the main.ts
+
+
+
+1.What is an Asynchronous Function?
+An asynchronous function is a function that does not block the execution of the program while waiting for an operation to complete (e.g., fetching data, reading a file, making an API call). Instead, it allows other code to run while waiting for the task to finish.
+
+2. What is a Promise?
+A Promise represents a value that might not be available yet but will be at some point in the future.
+
+A Promise can have three states:
+
+Pending → The async operation is still running.
+Resolved (Fulfilled) → The operation finished successfully.
+Rejected → The operation failed.
