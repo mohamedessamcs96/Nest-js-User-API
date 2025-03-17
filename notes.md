@@ -1,78 +1,150 @@
-node -v 
+Here’s a well-structured and styled version of your content for clarity and readability:  
+
+---
+
+# 🚀 **NestJS Setup & Essential Commands**  
+
+### **📌 Check Node.js Version**  
+```sh
+node -v
+```
+
+### **📌 Set Node.js Version (Using nvm)**  
+```sh
 nvm use v18
-npm i -g @nestjs/cli #enable my to use the nest cli 
+```
+
+### **📌 Install NestJS CLI (Globally)**  
+```sh
+npm i -g @nestjs/cli
+```
+
+### **📌 Create a New NestJS Project**  
+```sh
 nest new lesson0
+```
+
+### **📌 Start the Development Server**  
+```sh
 npm run start:dev
+```
+
+### **📌 Install TypeORM & MySQL Dependencies**  
+```sh
 npm install --save @nestjs/typeorm typeorm mysql2
-nest g resource payment        
-nest g module  booking     
+```
+
+### **📌 Generate a NestJS Resource for Payments**  
+```sh
+nest g resource payment
+```
+
+### **📌 Generate a Module, Service, and Controller for Bookings**  
+```sh
+nest g module booking     
 nest g service booking   
 nest g controller booking    
-thunder client extension
+```
 
+### **📌 Install Thunder Client Extension**  
+👉 *Thunder Client is an alternative to Postman for testing APIs.*
+
+---
+
+# 🛠 **Database & Mongoose Setup**  
+### **📌 Install Mongoose for NestJS**  
+```sh
 npm install @nestjs/mongoose mongoose
+```
 
+---
 
-# Controller :
-`creating endpoinds`
-1. GET /REPORT/INCOME
-2. GET /REPORT/INCOME/:ID
-3. POST /REPORT/INCOME
-4. POST /REPORT/INCOME/:ID
-5. DELETE /REPORT/INCOME/:ID
+# 🌍 **REST API Endpoints for Reports**
+### **📌 Creating API Endpoints (Controller)**
+| HTTP Method | Endpoint                 | Description |
+|------------|-------------------------|-------------|
+| **GET**    | `/REPORT/INCOME`        | Fetch all income reports |
+| **GET**    | `/REPORT/INCOME/:ID`    | Fetch a specific income report |
+| **POST**   | `/REPORT/INCOME`        | Create a new income report |
+| **POST**   | `/REPORT/INCOME/:ID`    | Update an income report |
+| **DELETE** | `/REPORT/INCOME/:ID`    | Delete an income report |
 
+---
 
+# 📦 **JavaScript & TypeScript Essentials**  
 
+### **🔹 Export in JavaScript**  
+In JavaScript, the `export` statement is used in modules to **expose variables, functions, or classes** so they can be accessed in other files.  
 
+---
 
-#### export
-In JavaScript, the export statement is used in modules to expose variables, functions, or classes so that they can be accessed and used in other parts of the application or in separate files. By using the export , you make certain parts of your code accessible outside the module.
+### **🔹 Decorator Pattern**  
+A design pattern in Object-Oriented Programming that allows behavior to be **added dynamically to an individual object** without affecting other instances of the same class.
 
-#### Decorator pattern
-In object-oriented programming, the decorator pattern is a design pattern that allows behavior to be added to an individual object, dynamically, without affecting the behavior of other instances of the same class.
+---
 
+### **🔹 Abstract Class vs Interface**  
 
-#### Abstract Class vs	Interface
-* A class that cannot be instantiated and may contain both implemented and abstract methods.	
-* A structure that only defines method signatures without implementation.
-` In TypeScript, an interface defines the structure of an object, but it does not generate actual code. It only provides type checking at compile time.`
+| Feature | Abstract Class | Interface |
+|---------|---------------|-----------|
+| Instantiation | ❌ Cannot be instantiated | ❌ Cannot be instantiated |
+| Methods | Can have both **implemented** and **abstract** methods | Only **method signatures** (no implementation) |
+| Code Generation | Generates actual code | Used for **type checking only** (no code generation) |
 
+📌 *In TypeScript, an `interface` defines the structure of an object, but it does not generate code at runtime—it only provides type checking at compile time.*
 
-#### Understanding () => {} (Arrow Function) in JavaScript & TypeScript
-The syntax ()=>{} represents an arrow function, which is a shorter and more concise way to write functions in JavaScript and TypeScript.
+---
 
+### **🔹 Arrow Functions (`()=>{}`) in JavaScript & TypeScript**  
+Arrow functions provide a **shorter and more readable** way to define functions.  
+
+```ts
 const add = (a: number, b: number): number => a + b;
 console.log(add(2, 3)); // Output: 5
+```
 
+---
 
+### **🔹 Dynamically vs Statically Typed Languages**  
 
+| Type System | Description |
+|------------|-------------|
+| **Dynamically Typed** | Types are **associated with runtime values**, not explicitly defined in code. |
+| **Statically Typed** | Types are **explicitly assigned** to variables, function parameters, return values, etc. |
 
+---
 
-
-In Dynamically typed languages the types are associated with run time values and not named explictly in your code 
-
-in Staticly typed languages you explictyly assign types to variables function parameters , return values, etc .
-
+### **📌 TypeScript Setup & Compilation**  
+```sh
 npm install -g typescript
-tsc index.ts
-tsc --intit
+tsc index.ts       # Compile a TypeScript file
+tsc --init         # Initialize TypeScript config
+```
 
+---
 
+### **🔹 Dependency Injection in NestJS**  
+The methods of a **provider class** can be injected as dependencies using the `@Injectable()` decorator.  
 
-The methods of the provider class can be injected as a dependency to another class with the decorator injectable
+📌 *NestJS initializes the app using the `bootstrap` function inside* `main.ts`.
 
-We intializing our app using the bootstrap funtction in the main.ts
+---
 
+# ⚡ **Asynchronous Programming in JavaScript & TypeScript**  
 
+### **1️⃣ What is an Asynchronous Function?**  
+An **asynchronous function** does **not block** the execution of a program while waiting for operations to complete (e.g., fetching data, reading a file). It allows other code to run while waiting.  
 
-1.What is an Asynchronous Function?
-An asynchronous function is a function that does not block the execution of the program while waiting for an operation to complete (e.g., fetching data, reading a file, making an API call). Instead, it allows other code to run while waiting for the task to finish.
+---
 
-2. What is a Promise?
-A Promise represents a value that might not be available yet but will be at some point in the future.
+### **2️⃣ What is a Promise?**  
+A `Promise` represents a value that **might not be available yet** but will be at some point in the future.
 
-A Promise can have three states:
+#### **Promise States:**
+- **Pending** → The async operation is still running.
+- **Resolved (Fulfilled)** → The operation finished successfully.
+- **Rejected** → The operation failed.
 
-Pending → The async operation is still running.
-Resolved (Fulfilled) → The operation finished successfully.
-Rejected → The operation failed.
+---
+
+📌 **Want to dive deeper into NestJS or TypeScript? Let me know! 🚀**
