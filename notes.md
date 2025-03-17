@@ -2,7 +2,7 @@ Here’s a well-structured and styled version of your content for clarity and re
 
 ---
 
-# 🚀 **NestJS Setup & Essential Commands**  
+#  **NestJS Setup & Essential Commands**  
 
 ### **📌 Check Node.js Version**  
 ```sh
@@ -47,11 +47,11 @@ nest g controller booking
 ```
 
 ### **📌 Install Thunder Client Extension**  
-👉 *Thunder Client is an alternative to Postman for testing APIs.*
+ *Thunder Client is an alternative to Postman for testing APIs.*
 
 ---
 
-# 🛠 **Database & Mongoose Setup**  
+#  **Database & Mongoose Setup**  
 ### **📌 Install Mongoose for NestJS**  
 ```sh
 npm install @nestjs/mongoose mongoose
@@ -59,7 +59,7 @@ npm install @nestjs/mongoose mongoose
 
 ---
 
-# 🌍 **REST API Endpoints for Reports**
+#  **REST API Endpoints for Reports**
 ### **📌 Creating API Endpoints (Controller)**
 | HTTP Method | Endpoint                 | Description |
 |------------|-------------------------|-------------|
@@ -71,7 +71,7 @@ npm install @nestjs/mongoose mongoose
 
 ---
 
-# 📦 **JavaScript & TypeScript Essentials**  
+#  **JavaScript & TypeScript Essentials**  
 
 ### **🔹 Export in JavaScript**  
 In JavaScript, the `export` statement is used in modules to **expose variables, functions, or classes** so they can be accessed in other files.  
@@ -130,7 +130,7 @@ The methods of a **provider class** can be injected as dependencies using the `@
 
 ---
 
-# ⚡ **Asynchronous Programming in JavaScript & TypeScript**  
+#  **Asynchronous Programming in JavaScript & TypeScript**  
 
 ### **1️⃣ What is an Asynchronous Function?**  
 An **asynchronous function** does **not block** the execution of a program while waiting for operations to complete (e.g., fetching data, reading a file). It allows other code to run while waiting.  
@@ -147,4 +147,4 @@ A `Promise` represents a value that **might not be available yet** but will be a
 
 ---
 
-📌 **Want to dive deeper into NestJS or TypeScript? Let me know! 🚀**
+📌 **Want to dive deeper into NestJS or TypeScript? Let me know! **
